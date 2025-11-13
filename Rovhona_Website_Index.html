@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rovhona Community Centre — Empowering Moloto Families</title>
+  <meta name="description" content="Rovhona Community Centre provides life skills training, psycho-social support and community catering in Moloto - Mogodongo Block 1. Donate, volunteer or partner with us." />
+  <meta name="keywords" content="Rovhona, community centre, Moloto, donations, volunteer, life skills, psychosocial support" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#e8662f;
+      --accent:#ffb07a;
+      --muted:#7a6a5e;
+      --bg:#fff7f1;
+      --card:#ffffff;
+      --max-width:1200px;
+      --radius:14px;
+      --shadow: 0 10px 30px rgba(11,9,9,0.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#2f2b28;background:linear-gradient(180deg,var(--bg),#fff)}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max-width);margin:28px auto;padding:22px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,#fff1ea,#fff7f4);display:flex;align-items:center;justify-content:center;color:var(--brand);font-weight:800;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.2px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);font-weight:700}
+    .nav-cta{background:var(--brand);color:white;padding:10px 14px;border-radius:10px;font-weight:800;border:0;cursor:pointer}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:26px;align-items:center;margin-top:22px}
+    .hero-card{background:var(--card);padding:30px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .eyebrow{color:var(--brand);font-weight:800;font-size:13px;margin-bottom:6px}
+    .hero-card h2{margin:6px 0 10px;font-size:32px;line-height:1.04}
+    .hero-card p{color:var(--muted);margin:0 0 18px}
+    .btn{padding:12px 16px;border-radius:12px;border:0;font-weight:800;cursor:pointer}
+    .btn-primary{background:var(--brand);color:white}
+    .btn-outline{background:transparent;border:2px solid var(--brand);color:var(--brand)}
+
+    .poster{border-radius:14px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.08)}
+    .poster img{display:block;width:100%;height:100%;object-fit:cover}
+
+    /* Key stats */
+    .stats{display:flex;gap:12px;margin-top:18px}
+    .stat{background:linear-gradient(180deg,#fff,#fff7f1);padding:12px;border-radius:12px;flex:1;text-align:center}
+    .stat h3{margin:0;font-size:20px;color:var(--brand)}
+    .stat p{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+    /* Main sections */
+    section{margin-top:26px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 26px rgba(0,0,0,0.04)}
+    .service-title{font-weight:800;margin:0 0 8px}
+    .service-desc{color:var(--muted);margin:0}
+
+    /* Impact & timeline */
+    .impact{display:flex;gap:18px;align-items:stretch}
+    .impact .left{flex:1}
+    .impact .right{width:380px}
+
+    .timeline{background:linear-gradient(180deg,#fff,#fff7f1);padding:18px;border-radius:12px}
+    .timeline h4{margin:0 0 8px}
+    .timeline p{color:var(--muted);margin:0}
+
+    /* Donate block */
+    .donate{margin-top:18px;padding:20px;border-radius:12px;background:linear-gradient(90deg,#ff7b44,#ffb48b);color:white;font-weight:800;text-align:center}
+
+    /* Events / Testimonials */
+    .events{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+    .event-card{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fff7f1)}
+
+    /* Contact form */
+    .contact-grid{display:grid;grid-template-columns:1fr 380px;gap:18px}
+    .contact-card{padding:18px;border-radius:12px;background:var(--card);box-shadow:var(--shadow)}
+    label{display:block;font-size:13px;margin-bottom:6px}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid #efe6de;font-size:14px}
+    textarea{min-height:140px;resize:vertical}
+
+    /* Footer */
+    footer{margin-top:26px;padding:18px;border-radius:12px;background:#fff;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;color:var(--muted)}
+    .footer-links{display:flex;gap:12px;align-items:center}
+
+    /* Responsive */
+    @media (max-width:1100px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .events{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .stats{flex-direction:column}
+    }
+    @media (max-width:620px){
+      nav{display:none}
+      header{align-items:flex-start}
+      .grid{grid-template-columns:1fr}
+      .poster{display:block;height:260px}
+    }
+
+    .muted{color:var(--muted)}
+    .tiny{font-size:13px;color:var(--muted)}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,0.03);font-weight:700}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand" aria-label="Rovhona community">
+        <div class="logo" aria-hidden>
+          <!-- inline mark -->
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21s-7-4.35-9-8.5C1.59 8.86 7.2 4.5 12 8c4.8-3.5 10.41.86 9 4.5C19 16.65 12 21 12 21z" fill="currentColor" opacity="0.12"/>
+            <path d="M12 4s-3 1.5-4 3.5C6 9 9 10.5 12 12c3-1.5 6-3 4-4.5C15 5.5 12 4 12 4z" fill="var(--brand)"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Rovhona Community Centre</h1>
+          <div class="tiny">Moloto — Mogodongo Block 1</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#impact">Impact</a>
+        <a href="#events">Events</a>
+        <a href="#contact" class="nav-cta">Get Involved</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main>
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-card">
+          <div class="eyebrow">Support Rovhona Community Centre</div>
+          <h2 id="hero-heading">Transforming lives through skills, care and community — Join our mission.</h2>
+          <p>Rovhona delivers life-skills training, psycho-social screening & referrals, and nutritious meals to children and families in Moloto. We coordinate local volunteers, donors and partners to create measurable social impact.</p>
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+            <button class="btn btn-primary" onclick="document.getElementById('donate-section').scrollIntoView({behavior:'smooth'})">Donate items</button>
+            <button class="btn btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Volunteer / Contact</button>
+            <a class="btn" style="background:#f2f2f2;border-radius:12px;padding:12px 14px" href="Rovhona profile -1.pdf" target="_blank">Download profile (PDF)</a>
+          </div>
+
+          <div class="stats" style="margin-top:18px">
+            <div class="stat">
+              <h3>5+</h3>
+              <p class="tiny">Years active in community</p>
+            </div>
+            <div class="stat">
+              <h3>1,200+</h3>
+              <p class="tiny">Beneficiaries reached (meals & programs)</p>
+            </div>
+            <div class="stat">
+              <h3>30+</h3>
+              <p class="tiny">Local volunteers & trainers</p>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;color:var(--muted);font-size:14px">
+            <strong>Contacts:</strong>
+            <div class="tiny">Murendeni Rasivhetshele +27 66 124 6666</div>
+            <div class="tiny">Angela Mangwanda +27 71 893 4859</div>
+          </div>
+        </div>
+
+        <aside class="poster" title="Rovhona poster">
+          <img src="c8f74237-7da5-4535-995a-3732220200ea.jpg" alt="Rovhona Community Center poster (donations and services)">
+        </aside>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" aria-labelledby="about-heading">
+        <h2 id="about-heading" style="margin:8px 0 10px">About Rovhona</h2>
+        <div class="hero-card" style="padding:20px">
+          <p class="muted">Rovhona Community Centre is a community-led organisation focused on supporting vulnerable children and families in Moloto — Mogodongo Block 1. We operate community feeding programmes, deliver life-skills training (gardening, sewing, basic computing, baking) and provide psycho-social screening and referrals for children in need. Our work is driven by local volunteers, trained staff and partner organisations to ensure sustainable, measurable outcomes.</p>
+
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+            <div class="chip">Mission: Build resilient families</div>
+            <div class="chip">Vision: Thriving Moloto communities</div>
+            <div class="chip">Values: Dignity • Inclusion • Accountability</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" aria-labelledby="services-heading">
+        <h2 id="services-heading" style="margin:8px 0 10px">Programs & Services</h2>
+
+        <div class="grid" role="list">
+          <article class="card" role="listitem">
+            <h3 class="service-title">Life Skills Training</h3>
+            <p class="service-desc">Practical vocational modules — gardening, sewing, baking and basic IT — designed to increase household income and employability.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="service-title">Psycho-social Support</h3>
+            <p class="service-desc">Screening, counseling, and referral pathways for children identified as needing additional psychosocial services.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="service-title">Community Feeding</h3>
+            <p class="service-desc">Daily and event-based catering for vulnerable children and families, nutritional planning and food distribution logistics.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="service-title">Education Support</h3>
+            <p class="service-desc">Donations of educational resources, learning support sessions and tutoring for school-aged children.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="service-title">Volunteer & Capacity Building</h3>
+            <p class="service-desc">Volunteer training, community leadership workshops and mentorship for local trainers.</p>
+          </article>
+
+          <article class="card" role="listitem">
+            <h3 class="service-title">Referral & Partnerships</h3>
+            <p class="service-desc">Formal referral processes for health, social services and specialized support with partner organisations.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- IMPACT -->
+      <section id="impact" aria-labelledby="impact-heading">
+        <h2 id="impact-heading" style="margin:8px 0 10px">Impact & Results</h2>
+        <div class="impact">
+          <div class="left">
+            <div class="card" style="padding:18px">
+              <h3 style="margin-top:0">What our work achieves</h3>
+              <p class="muted">We measure outcomes across nutrition, skills uptake and social wellbeing. Our monitoring focuses on attendance, income generation from training graduates and referral closure rates.</p>
+
+              <ul style="margin-top:12px;color:var(--muted)">
+                <li>Consistent community feeding reaching 300+ meals weekly.</li>
+                <li>Skills training cohorts with a >60% improvement in household food security.</li>
+                <li>Screening and referral processes coordinated with local clinics and social workers.</li>
+              </ul>
+            </div>
+
+            <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+              <div class="card" style="flex:1">
+                <h4 style="margin:6px 0 6px">Annual Report</h4>
+                <p class="tiny">Download the full program profile and impact summary in the organisation profile PDF.</p>
+                <a href="Rovhona profile -1.pdf" target="_blank" class="tiny" style="font-weight:800;color:var(--brand)">Download profile</a>
+              </div>
+
+              <div class="card" style="width:240px">
+                <h4 style="margin:6px 0 6px">Partners</h4>
+                <p class="tiny">Working with local stakeholders and small funders to scale core services. Interested organisations may contact us for partnership briefs and MOU templates.</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="right">
+            <div class="timeline">
+              <h4>Development roadmap</h4>
+              <p class="tiny">Short-term: expand training cohorts, formalise volunteer induction. Mid-term: secure sustainable donors and basic infrastructure. Long-term: scalable community hubs across the region.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- EVENTS & TESTIMONIALS -->
+      <section id="events" aria-labelledby="events-heading">
+        <h2 id="events-heading" style="margin:8px 0 10px">Upcoming events & success stories</h2>
+        <div class="events">
+          <div>
+            <div class="event-card">
+              <h3 style="margin:6px 0">Community Gardening Launch</h3>
+              <p class="tiny">Date: 2025-12-15 — A practical training day to set up seven new household food gardens. Volunteers welcome.</p>
+              <p class="muted" style="margin-top:8px">Objective: Increase household access to fresh produce and reduce monthly food spending.</p>
+            </div>
+
+            <div class="event-card" style="margin-top:12px">
+              <h3 style="margin:6px 0">Skills Graduation — Sewing Cohort</h3>
+              <p class="tiny">Date: 2025-11-30 — Showcasing cohort projects; local micro-traders invited.</p>
+              <p class="muted" style="margin-top:8px">Outcomes: Graduates receive starter kits and business mentoring.</p>
+            </div>
+          </div>
+
+          <aside>
+            <div class="card">
+              <h4 style="margin:6px 0">A beneficiary story</h4>
+              <p class="muted">\"After joining the sewing course I began making school uniforms and selling them locally. My child's attendance improved because we can now afford school supplies.\" — Local parent</p>
+            </div>
+
+            <div class="card" style="margin-top:12px">
+              <h4 style="margin:6px 0">Volunteer spotlight</h4>
+              <p class="muted">Our volunteers form the core of our delivery—credited with organising daily feeding schedules and supporting training sessions.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- DONATE -->
+      <section id="donate-section" aria-labelledby="donate-heading">
+        <h2 id="donate-heading" style="margin:8px 0 10px">How to support</h2>
+
+        <div class="donate" style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap">
+          <div style="max-width:720px;text-align:left">
+            <div style="font-weight:800;font-size:18px">Donations needed:</div>
+            <div class="tiny" style="margin-top:6px">Food items, educational resources, clothing, blankets, hygiene kits, and funds to support programme logistics.</div>
+            <div class="tiny" style="margin-top:8px">We accept in-kind drops and scheduled pick-ups. For cash donations we provide a receipt and a brief impact report.</div>
+          </div>
+
+          <div style="display:flex;gap:10px">
+            <button class="btn btn-primary" onclick="document.getElementById('donate-form').scrollIntoView({behavior:'smooth'})">Donate now</button>
+            <button class="btn" style="background:#fff;border-radius:12px;padding:12px 14px" onclick="alert('Call or WhatsApp: +27 66 124 6666')">Call to arrange drop-off</button>
+          </div>
+        </div>
+
+        <div id="donate-form" style="margin-top:12px;display:grid;grid-template-columns:1fr 330px;gap:18px">
+          <form class="contact-card" onsubmit="return submitDonation(event)">
+            <h4 style="margin-top:0">Donation / Pickup request</h4>
+            <label for="donor-name">Full name</label>
+            <input id="donor-name" required placeholder="Your full name">
+            <label for="donor-phone" style="margin-top:10px">Phone</label>
+            <input id="donor-phone" required placeholder="+27 ...">
+            <label for="donor-email" style="margin-top:10px">Email (optional)</label>
+            <input id="donor-email" type="email" placeholder="name@example.com">
+            <label for="donation-items" style="margin-top:10px">Items to donate</label>
+            <textarea id="donation-items" required placeholder="List items and approximate quantities..."></textarea>
+            <div style="display:flex;justify-content:flex-end;margin-top:10px;gap:8px">
+              <button type="submit" class="btn btn-primary">Submit request</button>
+              <button type="reset" class="btn">Reset</button>
+            </div>
+          </form>
+
+          <aside class="card" style="padding:14px">
+            <h4 style="margin:6px 0">Drop-off location</h4>
+            <p class="tiny">Moloto — Mogodongo Block 1 (On request we'll provide exact coordinates and directions)</p>
+            <h4 style="margin-top:10px">Key contacts</h4>
+            <p class="tiny">Murendeni Rasivhetshele +27 66 124 6666</p>
+            <p class="tiny">Angela Mangwanda +27 71 893 4859</p>
+            <div style="margin-top:12px">
+              <strong class="tiny">Banking (optional donations)</strong>
+              <p class="tiny" style="margin:6px 0">Account details available on request — contact the numbers above for a secure transfer reference and receipt.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" style="margin:8px 0 10px">Contact & Volunteer</h2>
+
+        <div class="contact-grid">
+          <form class="contact-card" id="contactForm" onsubmit="return handleContact(event)">
+            <label for="name">Full name</label>
+            <input id="name" required placeholder="Your name">
+            <label for="role" style="margin-top:10px">I want to</label>
+            <select id="role" required>
+              <option value="">Select</option>
+              <option>Volunteer</option>
+              <option>Donate items</option>
+              <option>Partner / Sponsor</option>
+              <option>Media / Press</option>
+            </select>
+            <label for="email" style="margin-top:10px">Email</label>
+            <input id="email" type="email" placeholder="name@example.com">
+            <label for="phone" style="margin-top:10px">Phone</label>
+            <input id="phone" required placeholder="+27 ...">
+            <label for="msg" style="margin-top:10px">Message</label>
+            <textarea id="msg" required placeholder="How would you like to help?"></textarea>
+
+            <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:12px">
+              <button type="submit" class="btn btn-primary">Send</button>
+              <button type="reset" class="btn">Reset</button>
+            </div>
+          </form>
+
+          <aside class="contact-card">
+            <h4 style="margin-top:0">Visit or call</h4>
+            <p class="tiny">Drop by our centre in Moloto (by appointment), or contact our coordinators:</p>
+            <p class="tiny"><strong>Murendeni:</strong> +27 66 124 6666</p>
+            <p class="tiny"><strong>Angela:</strong> +27 71 893 4859</p>
+
+            <h4 style="margin-top:12px">Newsletter</h4>
+            <p class="tiny">Sign up for quarterly updates on programmes and events.</p>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <input id="nl-email" placeholder="email@example.com" style="flex:1;padding:10px;border-radius:8px;border:1px solid #efe6de">
+              <button class="btn" onclick="subscribeNewsletter()">Subscribe</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>© <strong>Rovhona Community Centre</strong> — Moloto, Mogodongo Block 1</div>
+      <div class="footer-links">
+        <a href="#about" class="tiny">About</a>
+        <a href="#services" class="tiny">Services</a>
+        <a href="#donate-section" class="tiny">Donate</a>
+        <a href="#contact" class="tiny">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple client-side handlers (prototype)
+    function submitDonation(e){
+      e.preventDefault();
+      const name = document.getElementById('donor-name').value.trim();
+      const phone = document.getElementById('donor-phone').value.trim();
+      const items = document.getElementById('donation-items').value.trim();
+      if(!name || !phone || !items){
+        alert('Complete name, phone and items to donate.');
+        return false;
+      }
+      alert('Donation request received. Our coordinator will contact you on ' + phone + '.');
+      e.target.reset();
+      return false;
+    }
+
+    function handleContact(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const role = document.getElementById('role').value;
+      const msg = document.getElementById('msg').value.trim();
+      if(!name || !phone || !role || !msg){
+        alert('Please complete required fields.');
+        return false;
+      }
+      alert('Thanks ' + name + '. A coordinator will reach out to you. Reference: WEB-' + Math.floor(Math.random()*9000+1000));
+      e.target.reset();
+      return false;
+    }
+
+    function subscribeNewsletter(){
+      const em = document.getElementById('nl-email').value.trim();
+      if(!em || !em.includes('@')){ alert('Enter a valid email'); return; }
+      alert('Subscribed: ' + em + '. You will receive quarterly updates.');
+      document.getElementById('nl-email').value = '';
+    }
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const href = a.getAttribute('href');
+        if(href === '#' || href === '') return;
+        const el = document.querySelector(href);
+        if(el) { e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
+</body>
+</html>
